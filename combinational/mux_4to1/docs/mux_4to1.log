@@ -1,0 +1,10 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+Time=0 | Data=0001 Sel=00 | Y=1
+Time=10 | Data=0010 Sel=01 | Y=1
+Time=20 | Data=0100 Sel=10 | Y=1
+Time=30 | Data=1000 Sel=11 | Y=1
+Time=40 | Data=1110 Sel=00 | Y=0
+Time=50 | Data=1101 Sel=01 | Y=0
+Time=60 | Data=1011 Sel=10 | Y=0
+Time=70 | Data=0111 Sel=11 | Y=0
+tb/tb_mux_4to1.v:23: $finish called at 80 (1s)

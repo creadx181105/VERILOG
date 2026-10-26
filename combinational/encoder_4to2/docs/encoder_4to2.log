@@ -1,0 +1,6 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+Time=0 | In=0001 | Code=00 Valid=1
+Time=10 | In=0010 | Code=01 Valid=1
+Time=20 | In=0100 | Code=10 Valid=1
+Time=30 | In=1000 | Code=11 Valid=1
+tb/tb_encoder_4to2.v:19: $finish called at 40 (1s)

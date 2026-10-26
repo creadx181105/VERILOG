@@ -1,0 +1,60 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x59489d2f9ad0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x59489d2f9c60 .scope module, "tb_decoder_2to4" "tb_decoder_2to4" 3 1;
+ .timescale 0 0;
+v0x59489d30ca50_0 .var "in", 1 0;
+v0x59489d30cb40_0 .net "y", 3 0, L_0x59489d30cc40;  1 drivers
+S_0x59489d2c0500 .scope module, "uut" "decoder_2to4" 3 6, 4 1 0, S_0x59489d2f9c60;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /OUTPUT 4 "y";
+L_0x7926d8b28018 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v0x59489d2c06e0_0 .net/2u *"_ivl_0", 3 0, L_0x7926d8b28018;  1 drivers
+v0x59489d30c850_0 .net "in", 1 0, v0x59489d30ca50_0;  1 drivers
+v0x59489d30c930_0 .net "y", 3 0, L_0x59489d30cc40;  alias, 1 drivers
+L_0x59489d30cc40 .shift/l 4, L_0x7926d8b28018, v0x59489d30ca50_0;
+    .scope S_0x59489d2f9c60;
+T_0 ;
+    %vpi_call/w 3 9 "$dumpfile", "waves/dump.vcd" {0 0 0};
+    %vpi_call/w 3 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x59489d2f9c60 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x59489d2f9c60;
+T_1 ;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x59489d30ca50_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x59489d30ca50_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x59489d30ca50_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x59489d30ca50_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call/w 3 18 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x59489d2f9c60;
+T_2 ;
+    %vpi_call/w 3 21 "$monitor", "Time=%0t | In=%b | Y=%b", $time, v0x59489d30ca50_0, v0x59489d30cb40_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb/tb_decoder_2to4.v";
+    "rtl/decoder_2to4.v";

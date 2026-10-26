@@ -1,0 +1,4 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+Time=0 | A=0 | Y=1
+Time=10 | A=1 | Y=0
+tb/tb_not_gate.v:16: $finish called at 20 (1s)

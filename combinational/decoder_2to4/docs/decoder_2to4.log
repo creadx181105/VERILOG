@@ -1,0 +1,6 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+Time=0 | In=00 | Y=0001
+Time=10 | In=01 | Y=0010
+Time=20 | In=10 | Y=0100
+Time=30 | In=11 | Y=1000
+tb/tb_decoder_2to4.v:18: $finish called at 40 (1s)
